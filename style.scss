@@ -1,123 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+$main: #F47B20;
+$light: #FFB366;
+$bg: #FFF0E6;
+$accent: #B85A10;
+$deep: #6B3008;
+
 body
 {
     margin: 0;
 }
 
-header 
+header
 {
-    background-color: #6B3008;
+    background-color: $deep;
     padding-bottom: 10px;
     padding-top:0px;
-    h1
+    
+    h1 // VillaNova title
     {
         margin-left:20px;
         a
         {
             font-family: quicksand;
-            color: #FFB366;
+            color: $light;
             text-decoration: none;
         }
     }
-    h3
+    h3 // Marseille city
     {
         text-decoration: none;
         margin-left: 20px;
         margin-bottom: 0;
         font-family: quicksand;
-        color:#FFF0E6;
+        color: $bg;
     }
-}
 
-.top
-{
-    display: flex;
-    justify-content: space-between;
-    button
+    .top // top contains the villanova and the 3 dots button for mobile
     {
-        margin-top: 20px;
-        align-self: center;
+        display: flex;
+        justify-content: space-between;
+
+        button // 3 dots button
+        {
+            margin-top: 20px;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            background: none;
+            border: 0px solid $light;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+            margin-right: 30px;
+        }
+    }
+
+    #menu_button_mobile
+    {
+        width: 5px;
+        height: 25px;
+        background-image:
+            radial-gradient(circle, $light 2.5px, transparent 2.5px),
+            radial-gradient(circle, $light 2.5px, transparent 2.5px),
+            radial-gradient(circle, $light 2.5px, transparent 2.5px);
+        background-size: 5px 5px;
+        background-position: 0 0, 0 9px, 0 18px;
+        background-repeat: no-repeat;
+    }
+
+    #change_city_button
+    {
+        background: none;
+        border: none;
+        padding: 0px;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 0;
+
+        h4 // Change city
+        {
+            font-family: quicksand;
+            color: $accent;
+            margin: 0;
+        }
+    }
+
+    .location_search
+    {
         display: flex;
         align-items: center;
-        background: none;
-        border: 0px solid #FFB366;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
+        justify-content: space-between;
         padding-right: 20px;
+        margin-right: 40px;
+
+        .location
+        {
+            h3
+            {
+                margin-top: 0;
+            }
+        }
+
+        .search_bar
+        {
+            display: flex;
+
+            input // search for parties
+            {
+                border-radius: 4px 0 0 4px;
+                border: none;
+                padding: 6px 10px;
+            }
+
+            button // search for parties button
+            {
+                border-radius: 0 4px 4px 0;
+                border: none;
+                background-color: $light;
+                color: $deep;
+                font-family: quicksand;
+                font-weight: bold;
+                padding: 6px 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#categories
+{
+    margin-top: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    display:flex;
+    gap: 5px;
+
+    button // categories buttons
+    {
+        background: none;
+        border: 1px solid $main;
+        border-radius: 20px;
+        padding: 4px 12px;
         cursor: pointer;
-        margin-right: 30px;
-    }
-}
-
-
-#menu_button_mobile
-{
-    width: 5px;
-    height: 25px;
-    background-image:
-        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px),
-        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px),
-        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px);
-    background-size: 5px 5px;
-    background-position: 0 0, 0 9px, 0 18px;
-    background-repeat: no-repeat;
-}
-
-#change_city_button
-{
-    background: none;
-    border: none;
-    padding: 0px;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-top: 0;
-
-    h4
-    {
         font-family: quicksand;
-        color: #B85A10;
-        margin: 0;
-    }
-}
-
-.location_search
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 20px;
-    margin-right: 40px;
-
-    .location
-    {
-        h3
-        {
-            margin-top: 0;
-        }
+        color: $main;
     }
 
-    .search_bar
+    #add_categories
     {
-        display: flex;
-        input
-        {
-            border-radius: 4px 0 0 4px;
-            border: none;
-            padding: 6px 10px;
-        }
+        margin-left: auto;
+    }
 
-        button
-        {
-            border-radius: 0 4px 4px 0;
-            border: none;
-            background-color: #FFB366;
-            color: #6B3008;
-            font-family: quicksand;
-            font-weight: bold;
-            padding: 6px 12px;
-            cursor: pointer;
-        }
+    .selected_category
+    {
+        background-color: $main;
+        color: $bg;
+        border-color: $main;
     }
 }
