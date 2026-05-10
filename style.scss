@@ -7,13 +7,117 @@ body
 
 header 
 {
-    background-color: grey;
-    h1, a
+    background-color: #6B3008;
+    padding-bottom: 10px;
+    padding-top:0px;
+    h1
+    {
+        margin-left:20px;
+        a
+        {
+            font-family: quicksand;
+            color: #FFB366;
+            text-decoration: none;
+        }
+    }
+    h3
+    {
+        text-decoration: none;
+        margin-left: 20px;
+        margin-bottom: 0;
+        font-family: quicksand;
+        color:#FFF0E6;
+    }
+}
+
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    button
+    {
+        margin-top: 20px;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        background: none;
+        border: 0px solid #FFB366;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+}
+
+
+#menu_button_mobile
+{
+    width: 5px;
+    height: 25px;
+    background-image:
+        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px),
+        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px),
+        radial-gradient(circle, #FFB366 2.5px, transparent 2.5px);
+    background-size: 5px 5px;
+    background-position: 0 0, 0 9px, 0 18px;
+    background-repeat: no-repeat;
+}
+
+#change_city_button
+{
+    background: none;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 0;
+
+    h4
     {
         font-family: quicksand;
-        padding-top: 10px;
-        margin-left:20px;
-        color: #FFB366;
-        text-decoration: none;
+        color: #B85A10;
+        margin: 0;
+    }
+}
+
+.location_search
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-right: 40px;
+
+    .location
+    {
+        h3
+        {
+            margin-top: 0;
+        }
+    }
+
+    .search_bar
+    {
+        display: flex;
+        input
+        {
+            border-radius: 4px 0 0 4px;
+            border: none;
+            padding: 6px 10px;
+        }
+
+        button
+        {
+            border-radius: 0 4px 4px 0;
+            border: none;
+            background-color: #FFB366;
+            color: #6B3008;
+            font-family: quicksand;
+            font-weight: bold;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
     }
 }

@@ -7,19 +7,27 @@
 </head>
 <body>
     <header>
-        <h1>
-            <a href="index.html">VillaNova</a>
-        </h1>
-        <button>
-            <img src="menu_button.png" alt="Menu button">
-        </button>
-        <h3>Marseille</h3>
-        <nav>
+        <div class="top">
+            <h1>
+                <a href="index.html">VillaNova</a>
+            </h1>
             <button>
-                <h4>Change city</h4>
+                <div id="menu_button_mobile"></div>
             </button>
-            <input type="text" placeholder="Search for parties...">
-        </nav>
+        </div>
+
+        <div class="location_search">
+            <div class="location">
+                <h3>Marseille</h3>
+                <button id="change_city_button">
+                    <h4>Change city</h4>
+                </button>
+            </div>
+            <div class="search_bar">
+                <input type="text" placeholder="Search for parties...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
     </header>
     <nav>
         <button>
