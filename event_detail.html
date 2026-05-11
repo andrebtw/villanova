@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VillaNova - Event</title>
+</head>
+<body>
+    <script src="event-detail.js"></script>
+    <header>
+        <div class="top">
+            <h1>
+                <a href="index.html">VillaNova</a>
+            </h1>
+            <button>
+                <div id="menu_button_mobile"></div>
+            </button>
+        </div>
+    </header>
+
+    <main id="event_detail">
+        <button id="back_button" onclick="window.location.href='index.html'">Retour à la liste</button>
+
+        <div id="event_header">
+            <img id="event_image" src="" alt="" hidden>
+            <div id="event_meta">
+                <div class="event_types" id="event_tags"></div>
+                <h1 id="event_title"></h1>
+                <span id="event_dates"></span>
+                <span id="event_address"></span>
+            </div>
+        </div>
+
+        <div id="event_body">
+            <p id="event_description"></p>
+        </div>
+    </main>
+</body>
+</html>
