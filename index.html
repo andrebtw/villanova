@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,48 +7,36 @@
     <title>VillaNova</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <header>
         <div class="top">
             <h1>
                 <a href="index.html">VillaNova</a>
             </h1>
-            <button>
-                <div id="menu_button_mobile"></div>
-            </button>
         </div>
 
         <div class="location_search">
             <div class="location">
-                <h3>Lyon</h3>
+                <h3>France</h3>
                 <button id="change_city_button">
-                    <h4>Change city</h4>
+                    <h4>Change city/country</h4>
                 </button>
             </div>
             <div class="search_bar">
                 <input type="text" placeholder="Search for parties...">
-                <button type="submit">Search</button>
             </div>
         </div>
     </header>
 
-    <nav id="categories">
-        <button class="selected_category">
-            <span>All</span>
-        </button>
-        <button>
-            <span>Tribe</span>
-        </button>
-        <button>
-            <span>Techno</span>
-        </button>
-        <button>
-            <span>Electro</span>
-        </button>
-        <button id="add_categories">
-            <span>+</span>
-        </button>
-    </nav>
+    <div id="categories_wrapper">
+        <nav id="categories">
+            <button id="all_categories" class="selected_category">
+                <span>All</span>
+            </button>
+            <button id="add_categories">
+                <span>+</span>
+            </button>
+        </nav>
+    </div>
 
 
     <h1 id="next_7_days">
@@ -140,5 +129,6 @@
             <span class="distance">10km away</span>
         </article>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
