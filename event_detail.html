@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>VillaNova - Event</title>
+    <title>VillaNova - Soirée</title>
 </head>
 <body>
-    <script src="event_detail.js"></script>
+    <a href="#event_detail" class="skip_link">Aller au contenu</a>
+
     <header>
         <div class="top">
             <h1>
                 <a href="index.html">VillaNova</a>
             </h1>
 
+            <details id="menu">
+                <summary aria-label="Ouvrir le menu">☰</summary>
+            </details>
+
+            <nav class="main_nav" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -21,7 +30,7 @@
         <button id="back_button" onclick="window.location.href='index.html'">Retour à la liste</button>
 
         <div id="event_header">
-            <h1 id="event_title"></h1>
+            <h2 id="event_title"></h2>
             <div id="event_header_body">
                 <img id="event_image" src="" alt="" hidden>
                 <div id="event_meta">
@@ -36,5 +45,7 @@
             <p id="event_description"></p>
         </div>
     </main>
+
+    <script src="event_detail.js"></script>
 </body>
 </html>

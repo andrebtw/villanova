@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VillaNova - Contact</title>
+</head>
+<body>
+    <a href="#contact" class="skip_link">Aller au contenu</a>
+
+    <header>
+        <div class="top">
+            <h1>
+                <a href="index.html">VillaNova</a>
+            </h1>
+
+            <details id="menu">
+                <summary aria-label="Ouvrir le menu">☰</summary>
+            </details>
+
+            <nav class="main_nav" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contact">
+        <h2>Nous contacter</h2>
+        <p class="intro">
+            Une question sur une soirée, une suggestion ou un problème sur le site ?
+            Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.
+        </p>
+
+        <p class="required_notice"><span aria-hidden="true">*</span> Les champs marqués sont obligatoires.</p>
+
+        <form action="#" method="post">
+            <div class="field">
+                <label for="nom">Nom <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="nom" name="nom" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Adresse e-mail <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="sujet">Sujet</label>
+                <select id="sujet" name="sujet">
+                    <option value="question">Une question</option>
+                    <option value="suggestion">Une suggestion</option>
+                    <option value="probleme">Un problème technique</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="message">Votre message <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="field checkbox_field">
+                <input type="checkbox" id="consentement" name="consentement" required>
+                <label for="consentement">
+                    J'accepte que mes informations soient utilisées pour me recontacter.
+                </label>
+            </div>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </main>
+</body>
+</html>

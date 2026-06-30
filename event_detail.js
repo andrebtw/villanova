@@ -2,7 +2,10 @@ function get_env() {
     return "ac66f3b9b442471f910d96310b7ba181";
 }
 
-const AGENDA_UID = 14115607;
+
+function get_agenda_uid() {
+    return localStorage.getItem("villanova_agenda_uid") || "14115607";
+}
 
 async function get_event(event_id) {
     const params = new URLSearchParams({
@@ -10,7 +13,7 @@ async function get_event(event_id) {
         includeLabels: 1,
     });
 
-    const response = await fetch(`https://api.openagenda.com/v2/agendas/${AGENDA_UID}/events/${event_id}?${params}`);
+    const response = await fetch(`https://api.openagenda.com/v2/agendas/${get_agenda_uid()}/events/${event_id}?${params}`);
     const data = await response.json();
     return data.event;
 }
@@ -38,7 +41,7 @@ function render_event(event) {
     const end_date = event.lastTiming?.end || null;
     const image = event.image ? event.image.base + event.image.filename : null;
 
-    document.title = `${title}`;
+    document.title = title + " - VillaNova";
 
     const event_title = document.getElementById("event_title");
     event_title.textContent = title;
@@ -50,7 +53,7 @@ function render_event(event) {
     event_address.textContent = address;
 
     const event_dates = document.getElementById("event_dates");
-    event_dates.textContent = `${format_date(start_date)}${end_date ? "->" + format_date(end_date) : ""}`;
+    event_dates.textContent = format_date(start_date) + (end_date ? " au " + format_date(end_date) : "");
 
     const event_image = document.getElementById("event_image");
     

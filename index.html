@@ -1,134 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>VillaNova</title>
+    <title>VillaNova - Agenda des soirées</title>
 </head>
 <body>
+    <a href="#contenu" class="skip_link">Aller au contenu</a>
+
     <header>
         <div class="top">
             <h1>
                 <a href="index.html">VillaNova</a>
             </h1>
-        </div>
 
-        <div class="location_search">
-            <div class="location">
-                <h3>France</h3>
-                <button id="change_city_button">
-                    <h4>Change city/country</h4>
-                </button>
-            </div>
-            <div class="search_bar">
-                <input type="text" placeholder="Search for parties...">
+            <details id="menu">
+                <summary aria-label="Ouvrir le menu">☰</summary>
+            </details>
+
+            <nav class="main_nav" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="location_search">
+                <div class="location">
+                    <h3 id="city_name">France</h3>
+                    <button id="change_city_button" aria-expanded="false">
+                        <span>Changer de ville</span>
+                    </button>
+
+                    <form id="city_form" hidden>
+                        <input type="text" id="city_input" placeholder="Ville (ex : Marseille)" aria-label="Nom de la ville">
+                        <input type="text" id="agenda_input" placeholder="Code OpenAgenda" aria-label="Code de l'agenda OpenAgenda">
+                        <button type="submit">Valider</button>
+                    </form>
+                </div>
+                <div class="search_bar">
+                    <input type="text" placeholder="Rechercher une soirée..." aria-label="Rechercher une soirée">
+                </div>
             </div>
         </div>
     </header>
 
-    <div id="categories_wrapper">
-        <nav id="categories">
-            <button id="all_categories" class="selected_category">
-                <span>All</span>
-            </button>
-            <button id="add_categories">
-                <span>+</span>
-            </button>
-        </nav>
-    </div>
+    <main id="contenu">
+        <div id="categories_wrapper">
+            <nav id="categories" aria-label="Filtres par catégorie">
+                <button id="all_categories" class="selected_category" aria-pressed="true">
+                    <span>Tout</span>
+                </button>
+                <button id="add_categories" aria-label="Ajouter une catégorie">
+                    <span>+</span>
+                </button>
+            </nav>
+        </div>
 
+        <h2 id="next_7_days">
+            Les 7 prochains jours
+        </h2>
 
-    <h1 id="next_7_days">
-        Next 7 days...
-    </h1>
+        <section id="next_7_days_section" aria-labelledby="next_7_days">
+            <article>
+                <div class="event_types">
+                    <span>...</span>
+                    <span>...</span>
+                    <span>...</span>
+                </div>
+                <h3 class="party_name">Chargement...</h3>
+                <span class="location_name">Chargement...</span>
+                <span class="artists">Chargement...</span>
+            </article>
+        </section>
 
-    <section id="next_7_days_section">
-        <article>
-            <div class="event_types">
-                <span>...</span>
-                <span>...</span>
-                <span>...</span>
-            </div>
-            <h3 class="party_name">Loading...</h3>
-            <span class="location_name">Loading...</span>
-            <span class="artists">Loading...</span>
-        </article>
+        <h2 id="next_month">
+            Le mois prochain
+        </h2>
 
-    </section>
+        <section id="next_month_section" aria-labelledby="next_month">
+            <article>
+                <div class="event_types">
+                    <span>Techno</span>
+                    <span>+18</span>
+                    <span>21€</span>
+                </div>
+                <h3 class="party_name">Nom de la soirée</h3>
+                <span class="location_name">Lieu</span>
+                <span class="artists">DJ1, DJ2, etc</span>
+                <span class="distance">à 10km</span>
+            </article>
+        </section>
+    </main>
 
-    <h1 id="next_month">
-        Next month...
-    </h1>
-
-    <section id="next_month_section">
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-        <article>
-            <div class="event_types">
-                <span>Techno</span>
-                <span>+18</span>
-                <span>21$</span>
-            </div>
-            <h3 class="party_name">PartyName</h3>
-            <span class="location_name">Location Name</span>
-            <span class="artists">DJ1, DJ2, etc</span>
-            <span class="distance">10km away</span>
-        </article>
-    </section>
     <script src="script.js"></script>
 </body>
 </html>
